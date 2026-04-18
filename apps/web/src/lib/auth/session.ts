@@ -91,8 +91,8 @@ async function verifyStoredPassword(password: string, storedHash: string) {
     return false;
   }
 
-  const derivedKey = (await scrypt(password, salt, 64)) as Buffer;
-  const providedDigest = Buffer.from(digest, "base64url");
+  const derivedKey = Uint8Array.from((await scrypt(password, salt, 64)) as Buffer);
+  const providedDigest = Uint8Array.from(Buffer.from(digest, "base64url"));
 
   return (
     providedDigest.length === derivedKey.length &&
