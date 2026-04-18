@@ -1,0 +1,25 @@
+{
+  "name": "admin",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "typecheck": "node --max-old-space-size=4096 ./node_modules/typescript/bin/tsc --noEmit -p tsconfig.typecheck.json"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.28",
+    "@types/react-dom": "18.3.7",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@blog/shared": "workspace:*",
+    "@ant-design/icons": "^6.1.1",
+    "@ant-design/pro-components": "^2.8.10",
+    "@umijs/max": "^4.6.45",
+    "antd": "^5.27.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "6.3.0"
+  }
+}

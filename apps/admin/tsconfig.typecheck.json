@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@blog/shared/admin": ["./src/types/shared-admin.d.ts"]
+    }
+  }
+}

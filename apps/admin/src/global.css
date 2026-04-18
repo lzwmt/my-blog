@@ -1,0 +1,239 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+.admin-auth-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(22, 119, 255, 0.12), transparent 28%),
+    linear-gradient(135deg, #f7f9fd 0%, #eef3fb 100%);
+}
+
+.admin-login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) minmax(420px, 1fr);
+  background:
+    radial-gradient(circle at top left, rgba(22, 119, 255, 0.18), transparent 28%),
+    linear-gradient(135deg, #f7f9fd 0%, #eef3fb 100%);
+}
+
+.admin-login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.admin-login-panel__card {
+  width: 100%;
+  max-width: 360px;
+}
+
+.admin-login-panel__surface {
+  padding: 32px;
+  border: 1px solid #dce4ef;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+}
+
+.admin-login-panel__eyebrow {
+  margin: 0 0 12px;
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.admin-login-panel__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.admin-login-panel__copy {
+  margin: 14px 0 28px;
+  color: #5f6b7c;
+  line-height: 1.7;
+}
+
+.admin-login-stage {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 32px 32px 32px 0;
+}
+
+.admin-login-stage__card {
+  width: 100%;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(237, 243, 251, 0.92)),
+    #ffffff;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.admin-login-stage__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.admin-login-stage__badge {
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(22, 119, 255, 0.1);
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-login-stage__headline {
+  max-width: 520px;
+  margin: 28px 0 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.admin-login-stage__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.admin-login-stage__tile {
+  padding: 18px;
+  border: 1px solid #d9e1ef;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.admin-login-stage__tile strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.admin-login-stage__tile span {
+  color: #5f6b7c;
+  line-height: 1.6;
+}
+
+.admin-login-stage__footnote {
+  margin: 24px 0 0;
+  color: #7a8698;
+  font-size: 13px;
+}
+
+.admin-page-copy {
+  color: #5f6b7c;
+  line-height: 1.7;
+}
+
+.admin-muted-text {
+  color: #8b97a8;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.admin-form-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.rich-editor {
+  border: 1px solid #d9e1ef;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.rich-editor__toolbar {
+  padding: 14px;
+  border-bottom: 1px solid #e5ebf5;
+  background: #f9fbff;
+}
+
+.rich-editor__surface {
+  min-height: 320px;
+  padding: 18px;
+  color: #223042;
+  font-size: 16px;
+  line-height: 1.8;
+  outline: none;
+}
+
+.rich-editor__surface h2,
+.rich-editor__surface h3 {
+  margin-top: 24px;
+}
+
+.rich-editor__surface p {
+  margin: 0 0 16px;
+}
+
+.rich-editor__surface blockquote {
+  margin: 20px 0;
+  padding: 14px 16px;
+  border-left: 4px solid #1677ff;
+  background: #f4f8ff;
+}
+
+.rich-editor__surface pre {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #f8fafc;
+  overflow-x: auto;
+}
+
+.rich-editor__note {
+  margin: 0;
+  padding: 12px 16px 16px;
+  color: #7a8698;
+  font-size: 13px;
+}
+
+@media (max-width: 1120px) {
+  .admin-login-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-login-stage {
+    padding: 0 24px 24px;
+  }
+
+  .admin-login-stage__list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
