@@ -17,7 +17,7 @@ import {
 } from "antd";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { RichTextEditor } from "@/components/RichTextEditor";
-import { adminContentService } from "@/services/content";
+import { ADMIN_SITE_BASE_URL, adminContentService } from "@/services/content";
 
 type PostEditorValues = CreatePostInput;
 
@@ -293,7 +293,7 @@ export default function PostEditorPage() {
           </Button>
           {post ? (
             <Button
-              href={`http://localhost:3000/posts/${post.slug}`}
+              href={`${ADMIN_SITE_BASE_URL}/posts/${post.slug}`}
               target="_blank"
             >
               打开前台页面

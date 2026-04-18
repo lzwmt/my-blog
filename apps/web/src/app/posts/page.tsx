@@ -41,7 +41,7 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
         <p className="content-page__eyebrow">归档</p>
         <h1 className="content-page__title">全部已发布文章</h1>
         <p className="content-page__copy">
-          这里按时间顺序展示所有已发布文章，MVP 阶段保持轻量结构，并使用简单的
+          这里按时间顺序展示所有已发布文章，现阶段保持轻量结构，并使用简单的
           查询参数完成分页。
         </p>
         <div className="content-page__meta">

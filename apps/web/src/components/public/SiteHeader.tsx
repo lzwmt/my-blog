@@ -23,7 +23,7 @@ export function SiteHeader() {
               aria-label="搜索占位输入框"
               className="site-search__input"
               name="site-search-placeholder"
-              placeholder="搜索功能将在 MVP 之后接入"
+              placeholder="搜索功能将在后续版本接入"
               readOnly
             />
           </div>

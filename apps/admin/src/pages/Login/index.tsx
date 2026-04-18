@@ -56,7 +56,7 @@ export default function LoginPage() {
           <p className="admin-login-panel__eyebrow">后台登录</p>
           <h1 className="admin-login-panel__title">写作、校对与发布统一在这里完成。</h1>
           <p className="admin-login-panel__copy">
-            当前 MVP 使用单管理员账号登录。登录成功后，仪表盘和内容管理接口会
+            当前版本使用单管理员账号登录。登录成功后，仪表盘和内容管理接口会
             共享同一会话边界。
           </p>
 

@@ -25,6 +25,11 @@ export const ADMIN_API_BASE_URL = (
   process.env.UMI_APP_API_BASE_URL || "http://localhost:3000/api"
 ).replace(/\/$/, "");
 
+export const ADMIN_SITE_BASE_URL = (
+  process.env.UMI_APP_SITE_BASE_URL ||
+  ADMIN_API_BASE_URL.replace(/\/api$/, "")
+).replace(/\/$/, "");
+
 interface RequestOptions {
   body?: unknown;
   method?: "DELETE" | "GET" | "PATCH" | "POST";

@@ -39,7 +39,7 @@ function mapSharedPostToSitePost(post: SharedPost, index: number): SitePost {
     coverImage: post.coverImage ?? "https://picsum.photos/seed/blog-fallback/1400/800",
     publishedAt: post.publishedAt ?? post.createdAt ?? "",
     readingTime: estimateReadingTime(post.content),
-    tags: post.tags.map((tag) => tag.slug),
+    tags: post.tags.map((tag) => tag.name),
     featured: index === 0
   };
 }
@@ -60,7 +60,7 @@ function mapSharedSiteSettingToProfile(
 }
 
 function mapSharedTagToSlug(tag: SharedTag) {
-  return tag.slug;
+  return tag.name;
 }
 
 export async function loadPublishedPosts() {

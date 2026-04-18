@@ -1,6 +1,5 @@
-import { PrismaClient, PostStatus } from "../packages/shared/generated/prisma/client";
-
-const prisma = new PrismaClient();
+import { PostStatus } from "../packages/shared/generated/prisma/client";
+import { prisma } from "../packages/shared/src/db/client";
 
 async function main() {
   const adminUser = await prisma.adminUser.upsert({
@@ -17,9 +16,9 @@ async function main() {
 
   const tags = await Promise.all(
     [
-      { name: "architecture", slug: "architecture" },
-      { name: "frontend", slug: "frontend" },
-      { name: "workflow", slug: "workflow" }
+      { name: "架构", slug: "architecture" },
+      { name: "前端", slug: "frontend" },
+      { name: "工作流", slug: "workflow" }
     ].map((tag) =>
       prisma.tag.upsert({
         where: {
@@ -38,26 +37,26 @@ async function main() {
       id: "default-site-setting"
     },
     update: {
-      siteName: "Personal Blog",
-      siteDescription: "An independent technical publication with a calm editorial tone.",
-      heroTitle: "A technical publication with a sharper editorial rhythm.",
+      siteName: "个人博客",
+      siteDescription: "一份保持克制语气与出版感的独立技术写作站点。",
+      heroTitle: "一份更有节奏感的技术写作出版物。",
       heroDescription:
-        "Write, edit, and publish essays on systems, frontend architecture, and product craft.",
+        "围绕系统设计、前端架构与产品实现，持续写作、整理与发布真实的工程实践。",
       socialLinks: [
-        { label: "GitHub", url: "https://github.com/your-handle" },
-        { label: "Email", url: "mailto:hello@example.com" }
+        { label: "GitHub", url: "https://github.com/lzwmt/my-blog" },
+        { label: "邮箱", url: "mailto:hello@example.com" }
       ]
     },
     create: {
       id: "default-site-setting",
-      siteName: "Personal Blog",
-      siteDescription: "An independent technical publication with a calm editorial tone.",
-      heroTitle: "A technical publication with a sharper editorial rhythm.",
+      siteName: "个人博客",
+      siteDescription: "一份保持克制语气与出版感的独立技术写作站点。",
+      heroTitle: "一份更有节奏感的技术写作出版物。",
       heroDescription:
-        "Write, edit, and publish essays on systems, frontend architecture, and product craft.",
+        "围绕系统设计、前端架构与产品实现，持续写作、整理与发布真实的工程实践。",
       socialLinks: [
-        { label: "GitHub", url: "https://github.com/your-handle" },
-        { label: "Email", url: "mailto:hello@example.com" }
+        { label: "GitHub", url: "https://github.com/lzwmt/my-blog" },
+        { label: "邮箱", url: "mailto:hello@example.com" }
       ]
     }
   });
@@ -67,22 +66,22 @@ async function main() {
       slug: "architecting-a-calm-personal-blog"
     },
     update: {
-      title: "Architecting a Calm Personal Blog",
+      title: "如何搭建一套安静但有编辑张力的个人博客",
       summary:
-        "A seed article that gives the public frontend and admin shell a consistent first dataset.",
+        "这是一篇用于初始化正式环境的示例文章，确保前台首页与后台管理在接入真实数据库后可以直接验证。",
       content:
-        "<p>This seeded article exists so the MVP can be verified against real database data instead of mock arrays.</p>",
+        "<p>这篇初始化文章用于让最小可用版本在接入真实数据库后，直接以真实内容验证首页展示、文章详情和后台管理链路。</p><p>当你准备发布第一篇正式文章时，可以在后台直接编辑或删除它。</p>",
       status: PostStatus.PUBLISHED,
       publishedAt: new Date("2026-04-18T09:00:00.000Z"),
       authorId: adminUser.id
     },
     create: {
       slug: "architecting-a-calm-personal-blog",
-      title: "Architecting a Calm Personal Blog",
+      title: "如何搭建一套安静但有编辑张力的个人博客",
       summary:
-        "A seed article that gives the public frontend and admin shell a consistent first dataset.",
+        "这是一篇用于初始化正式环境的示例文章，确保前台首页与后台管理在接入真实数据库后可以直接验证。",
       content:
-        "<p>This seeded article exists so the MVP can be verified against real database data instead of mock arrays.</p>",
+        "<p>这篇初始化文章用于让最小可用版本在接入真实数据库后，直接以真实内容验证首页展示、文章详情和后台管理链路。</p><p>当你准备发布第一篇正式文章时，可以在后台直接编辑或删除它。</p>",
       status: PostStatus.PUBLISHED,
       publishedAt: new Date("2026-04-18T09:00:00.000Z"),
       authorId: adminUser.id,

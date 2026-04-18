@@ -3,7 +3,7 @@ import { Button, Alert, Empty, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import type { Post } from "@blog/shared/admin";
 import { Link } from "react-router-dom";
-import { adminContentService } from "@/services/content";
+import { ADMIN_SITE_BASE_URL, adminContentService } from "@/services/content";
 
 const statusColorMap: Record<Post["status"], string> = {
   published: "blue",
@@ -71,7 +71,7 @@ const columns: ColumnsType<Post> = [
         </Button>
         <Button
           size="small"
-          href={`http://localhost:3000/posts/${post.slug}`}
+          href={`${ADMIN_SITE_BASE_URL}/posts/${post.slug}`}
           target="_blank"
         >
           预览

@@ -19,7 +19,7 @@ export function SidebarNav() {
 
       <div className="sidebar-nav__card">
         <p className="sidebar-nav__eyebrow">当前重点</p>
-        <h2 className="sidebar-nav__title">先做出安静、好用、可上线的 MVP。</h2>
+        <h2 className="sidebar-nav__title">先做出安静、好用、可上线的最小可用版本。</h2>
         <p className="sidebar-nav__copy">
           保留出版感，去掉社区化噪音，优先把写作与发布流程稳定下来。
         </p>

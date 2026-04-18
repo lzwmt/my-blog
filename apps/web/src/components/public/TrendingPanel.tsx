@@ -27,8 +27,7 @@ export async function TrendingPanel() {
       <section className="trending-panel__note">
         <p className="trending-panel__note-eyebrow">站点说明</p>
         <p className="trending-panel__note-copy">
-          这个前台界面迁移自 Digital Architect 的视觉原型，并裁剪成更聚焦的
-          个人博客 MVP。
+          这个前台界面迁移自既有视觉原型，并裁剪成更聚焦的个人博客最小可用版本。
         </p>
       </section>
     </aside>
