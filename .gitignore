@@ -2,6 +2,7 @@ node_modules
 .pnpm-store
 .next
 .next-prod
+.vercel
 .umi
 .umi-production
 dist
