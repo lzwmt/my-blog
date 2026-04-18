@@ -2,8 +2,9 @@ import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
 const directUrl = process.env.DIRECT_URL ?? process.env.DATABASE_URL;
+const isGenerateCommand = process.argv.includes("generate");
 
-if (!directUrl) {
+if (!directUrl && !isGenerateCommand) {
   throw new Error("DIRECT_URL or DATABASE_URL must be set before running Prisma CLI commands.");
 }
 
@@ -14,6 +15,6 @@ export default defineConfig({
     seed: "tsx prisma/seed.ts"
   },
   datasource: {
-    url: directUrl
+    url: directUrl ?? "postgresql://placeholder:placeholder@127.0.0.1:5432/placeholder"
   }
 });
