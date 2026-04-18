@@ -13,6 +13,8 @@
     "postinstall": "pnpm prisma:generate",
     "deploy:web:preview": "pnpm exec vercel --yes",
     "deploy:web:prod": "pnpm exec vercel --prod --yes",
+    "deploy:admin:preview": "pnpm exec vercel --cwd apps/admin --yes",
+    "deploy:admin:prod": "pnpm exec vercel --cwd apps/admin --prod --yes",
     "lint": "pnpm exec eslint . --max-warnings=0",
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test && pnpm run test:integration",
