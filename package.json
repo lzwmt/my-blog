@@ -11,6 +11,8 @@
     "dev": "pnpm --filter web dev",
     "build": "pnpm -r --if-present build",
     "postinstall": "pnpm prisma:generate",
+    "deploy:web:preview": "pnpm exec vercel --yes",
+    "deploy:web:prod": "pnpm exec vercel --prod --yes",
     "lint": "pnpm exec eslint . --max-warnings=0",
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test && pnpm run test:integration",

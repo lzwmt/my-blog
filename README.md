@@ -87,6 +87,7 @@ pnpm --filter admin dev
 部署细节见：
 
 - [First Launch Guide](./docs/deployment/first-launch.md)
+- [Vercel Release Guide](./docs/deployment/vercel-release.md)
 - [ADR-001 Launch Topology](./docs/decisions/ADR-001-launch-topology.md)
 
 准备正式上线时，优先按 `docs/deployment/first-launch.md` 中的“上线前准备清单”“推荐发布顺序”“上线后十分钟核验”执行。
