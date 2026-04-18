@@ -57,8 +57,8 @@ function parseSessionToken(token: string): SessionPayload | null {
   }
 
   const expectedSignature = signValue(encodedPayload);
-  const provided = Buffer.from(signature);
-  const expected = Buffer.from(expectedSignature);
+  const provided = Uint8Array.from(Buffer.from(signature, "base64url"));
+  const expected = Uint8Array.from(Buffer.from(expectedSignature, "base64url"));
 
   if (provided.length !== expected.length || !timingSafeEqual(provided, expected)) {
     return null;
